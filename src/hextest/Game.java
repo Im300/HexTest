@@ -43,7 +43,7 @@ public class Game extends JFrame implements Runnable {
         add(gamePanel);
         pack();
         
-        int hexSize = 70;
+        int hexSize = 80;
         Point2D origin = new Point2D.Double(0, 0);
         grid = new Grid(origin.getX(), origin.getY(), handler, 30, hexSize, 0);
         
@@ -72,7 +72,7 @@ public class Game extends JFrame implements Runnable {
     
     public void run() {
         long lastTime = System.nanoTime();
-        double amountOfTicks = 120.0;
+        double amountOfTicks = 60.0;
         double ns = 1000000000 / amountOfTicks;
         double delta = 0;
         long timer = System.currentTimeMillis();

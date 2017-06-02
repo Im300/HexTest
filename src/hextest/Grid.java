@@ -55,10 +55,11 @@ public class Grid extends GameObject {
 
             for (int col = 0; col < cols; col++) {
                 
-                int tempX = (int)  (origin.getX() + xOff * (col * 2 + 1 - cols));
-                int tempY = (int)  (origin.getY() + yOff * (row - half) * 3);
+                double tempX = (origin.getX() + xOff * (col * 2 + 1 - cols));
+                double tempY = (origin.getY() + yOff * (row - half) * 3);
 
-                Hexagon tempHex = new Hexagon(tempX, tempY, radius);
+                //Hexagon tempHex = new Hexagon(tempX, tempY, radius);
+                Hexagon tempHex = new Hexagon(new Point2D.Double(tempX, tempY), radius);
                 grid[row][col] = tempHex;
             }
         }

@@ -7,6 +7,7 @@ package hextest;
 
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.geom.Point2D;
 
 public class Camera {
     
@@ -17,12 +18,12 @@ public class Camera {
     
     double cameraSpeed;
     
-    Point position;
+    Point2D position;
     
     public Camera(double x, double y) {
-        this.position = new Point((int) x, (int) y);
+        this.position = new Point2D.Double(x, y);
         
-        this.cameraSpeed = 0.5;
+        this.cameraSpeed = 1;
         
     }
     
