@@ -74,7 +74,8 @@ public class Hexagon extends Polygon {
         for (int p = 0; p < SIDES; p++) {
             double angle = findAngle((double) p / SIDES);
             Point2D point = findPoint(angle);
-
+ 
+            //For drawing
             xpoints[p] = (int) point.getX();
             ypoints[p] = (int) point.getY();
             //points[p] = new Point2D.Double(point.getX(), point.getY());
